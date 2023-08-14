@@ -4,12 +4,13 @@ import { connect } from "react-redux";
 
 import { RootState } from "../../redux";
 import { changePopup, changeToken } from "../../redux/general/general.action";
+import { StockType } from "../../redux/stockQuotes/stockQuotes.reducer";
 import Loading from "../loading";
 
 type Props = {
   //mapStateToProps
   error: string;
-  stocks: any;
+  stocks: StockType[];
 
   //mapDispatchToProps
   addToken: (token: string) => void;

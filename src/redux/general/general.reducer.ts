@@ -7,7 +7,7 @@ export interface InitialStateGeneral {
 // Определение начального состояния
 const initialState: InitialStateGeneral = {
   token: '',
-  symbol: 'AA',
+  symbol: '',
   popup: false
 };
 

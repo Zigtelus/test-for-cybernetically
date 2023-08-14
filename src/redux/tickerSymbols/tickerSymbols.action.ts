@@ -1,3 +1,5 @@
+import { TickerSymbolType } from "./tickerSymbols.reducer"
+
 // загрузка SYMBOLS
 export const loadTikerSymbols = (token: string) => ({
   type: 'LOAD_TIKER-SYMBOLS',
@@ -5,7 +7,7 @@ export const loadTikerSymbols = (token: string) => ({
 })
 
 // добавление всех Symbols в стейт
-export const getTikerSymbols = (dataFromServer: any) => ({
+export const getTikerSymbols = (dataFromServer: TickerSymbolType[] | []) => ({
   type: 'GET_TIKER-SYMBOLS',
   payload: dataFromServer
 })

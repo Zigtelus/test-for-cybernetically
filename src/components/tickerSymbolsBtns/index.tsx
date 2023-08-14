@@ -96,21 +96,17 @@ class TickerSymbolsBtns extends React.Component<Props, State> {
   }
 }
 
-const mapStateToProps = (state: RootState) => {
-  return {
-    symbol: state.general.symbol,
-    symbols: state.tickerSymbols.symbols,
-    isLoading: state.tickerSymbols.isLoading,
-    isToken: state.general.token,
-  };
-};
+const mapStateToProps = (state: RootState) => ({
+  symbol: state.general.symbol,
+  symbols: state.tickerSymbols.symbols,
+  isLoading: state.tickerSymbols.isLoading,
+  isToken: state.general.token,
+});
 
-const mapDispatchToProps = (dispatch: any) => {
-  return {
-    tikerSymbolsLoader: (status: boolean) => dispatch(tikerSymbolsLoader(status)),
-    fetchSymbols: (token: string) => dispatch(loadTikerSymbols(token)),
-    changeSymbol: (symbol: string) => dispatch(changeSymbol(symbol))
-  };
-};
+const mapDispatchToProps = (dispatch: any) => ({
+  tikerSymbolsLoader: (status: boolean) => dispatch(tikerSymbolsLoader(status)),
+  fetchSymbols: (token: string) => dispatch(loadTikerSymbols(token)),
+  changeSymbol: (symbol: string) => dispatch(changeSymbol(symbol))
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(TickerSymbolsBtns);

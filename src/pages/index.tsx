@@ -78,11 +78,9 @@ const mapStateToProps = (state: RootState) => {
   };
 };
 
-const mapDispatchToProps = (dispatch: any) => {
-  return {
-    addToken: (token: string) => dispatch(changeToken(token)),
-    changePopup: (status: boolean) => dispatch(changePopup(status))
-  };
-};
+const mapDispatchToProps = (dispatch: any) => ({
+  addToken: (token: string) => dispatch(changeToken(token)),
+  changePopup: (status: boolean) => dispatch(changePopup(status))
+});
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
