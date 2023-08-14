@@ -1,0 +1,61 @@
+.stock {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 8px 0;
+
+  span {
+    display: block;
+    width: 50%;
+    padding: 6px 10px;
+  }
+
+  span:nth-of-type(1) {
+    background-color: aqua;
+  }
+
+  span:nth-of-type(2) {
+    text-align: end;
+    background-color: rgb(90, 129, 161);
+  }
+}
+
+.numbersOfPages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+
+  .numberPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    border: black 1px solid;
+    background-color: blue;
+
+    width: 15px;
+    height: 15px;
+
+    &:hover {
+      background-color: rgba(0, 0, 255, 0.462);
+    }
+
+    &Active {
+      border: blue 1px solid;
+      background-color: white;
+      color: blue;
+      cursor: default;
+
+
+      &:hover {
+        background-color: white;
+      }
+    }
+  }
+}

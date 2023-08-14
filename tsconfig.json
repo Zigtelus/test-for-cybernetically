@@ -1,26 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "target": "es5", //в какую версию JavaScript будет скомпилирован ваш код
+    "module": "esnext", //определяет в какую модульная систему будет компилиться (ESNext - это имя, которое всегда указывает на следующую версию JavaScript)
+    "jsx": "react", //указывает на синтаксис jsx
+    "strict": true, //включает строгий режим
+    "esModuleInterop": true, //указывает на использование exports import из ES6
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "allowImportingTsExtensions": true, //позволяет импортировать модули с расширениями .ts или .tsx
+    "noEmit": true //компилятор только проверит синтаксис и типы, но не создаст выходные файлы
   },
-  "include": [
+  "include": [ // какие файлы и папки должны быть включены в процесс компиляции TypeScript
     "src"
   ]
 }
